@@ -37,7 +37,7 @@ const LoginScreen = () => {
           console.log(response);
           const token = response.data.token;
           AsyncStorage.setItem("authToken", token);
-          navigation.replace("Home");
+          navigation.replace("Main");
         })
         .catch((error) => {
           Alert.alert("Login error occurred", "Invalid Email");
